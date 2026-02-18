@@ -5,6 +5,7 @@ import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Education from './components/Education'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 import './App.css'
 
 function App() {
@@ -30,13 +31,14 @@ function App() {
             <li><a onClick={() => scrollToSection('skills')}>Skills</a></li>
             <li><a onClick={() => scrollToSection('education')}>Education</a></li>
             <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
+            <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
           </ul>
         </div>
       </nav>
 
       <main className="main-content">
         <section id="hero">
-          <Hero />
+          <Hero scrollToSection={scrollToSection} />
         </section>
         <section id="about">
           <About />
@@ -53,15 +55,20 @@ function App() {
         <section id="projects">
           <Projects />
         </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
 
       <footer className="footer">
         <div className="footer-content">
           <p>&copy; 2024 My Portfolio. All rights reserved.</p>
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="tel:9999999999">9999999999</a>
+            <a href="mailto:abc@gmail.com">abc@gmail.com</a>
           </div>
         </div>
       </footer>

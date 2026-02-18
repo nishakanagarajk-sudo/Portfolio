@@ -1,6 +1,12 @@
 import './Hero.css'
 
-const Hero = () => {
+const Hero = ({ scrollToSection }) => {
+  const handleGetStarted = () => {
+    if (typeof scrollToSection === 'function') {
+      scrollToSection('contact')
+    }
+  }
+
   return (
     <div className="hero">
       <div className="hero-content">
@@ -9,7 +15,7 @@ const Hero = () => {
         <p className="hero-description">
           Creating beautiful and functional web experiences
         </p>
-        <button className="cta-button">Get Started</button>
+        <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
       </div>
       <div className="hero-image">
         <div className="hero-placeholder">👨‍💻</div>
